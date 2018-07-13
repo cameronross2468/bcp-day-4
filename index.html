@@ -30,44 +30,27 @@
         </label>  
     </p>
 
-    <!-- <p>
-        <textarea>default content</textarea>
-    </p>
-
     <p>
-        <select>
-            <option>red</option>
-            <option>blue</option>
-            <option>green</option>
-        </select>
-
-        
-    </p>
-
-    <p>
-        <input onkeypress="change()">
-    </p> -->
-
-    <p>
-        <button onclick="count()">Click me</button>
+        <button onclick="showName()">Click me</button>
     </p>
 
     </main>
 
     <script>
-        function count() {
-            for (var i=0; i<20; i++) {
-
-                console.log(i+1);
-
-              }
-         }
 
         function showName() {
-            var input = document.getElementbyId('name');
-            console.log('a change happened');
+            var input = document.getElementById('name');
+            var name = input.value;
+            console.log(name);
         }
 
+        // function count() {
+        //     for (var i=0; i<20; i++) {
+
+        //         console.log(i+1);
+
+        //       }
+        //  }
     </script>
 </body>
 </html>
