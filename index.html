@@ -37,6 +37,7 @@
             <button onclick="calc()">Click me</button>
     </p>
 
+    <p id='result'></p>
 
     </main>
 
@@ -52,9 +53,10 @@
             }
             else {
                 var radio = document.querySelector('input[name=power]:checked');
+                
                 var p = document.getElementById('result');
 
-                p.innerText = (number + 'to the power of ' + radio.value + 'is ' + number ** radio.value);
+                p.innerText = (number + ' to the power of ' + radio.value + ' is ' + number ** radio.value);
                 
   
             }
