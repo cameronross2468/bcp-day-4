@@ -8,7 +8,14 @@
 </head>
 <body>
     <h1>Just an App</h1>
+
     <main>
+        
+        <label>
+            Name:
+            <input id="name">
+        </label>
+
         <p>
         <label>
             <input name="power" type="radio"> Square
@@ -23,7 +30,7 @@
         </label>  
     </p>
 
-    <p>
+    <!-- <p>
         <textarea>default content</textarea>
     </p>
 
@@ -38,16 +45,29 @@
     </p>
 
     <p>
-        <button>Clicky</button>
+        <input onkeypress="change()">
+    </p> -->
+
+    <p>
+        <button onclick="count()">Click me</button>
     </p>
 
     </main>
 
     <script>
-        //updating for branch
-        for (var i=0; i<20; i++) {}
+        function count() {
+            for (var i=0; i<20; i++) {
 
-        console.log('hello world')
+                console.log(i+1);
+
+              }
+         }
+
+        function showName() {
+            var input = document.getElementbyId('name');
+            console.log('a change happened');
+        }
+
     </script>
 </body>
 </html>
