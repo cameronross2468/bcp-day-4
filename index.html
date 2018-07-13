@@ -5,66 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>App Time</title>
+
+
+
 </head>
 <body>
-    <h1>Just an App</h1>
+    <h1>nth Power App</h1>
 
     <main>
         
         <label>
-            Name:
-            <input id="name">
+            Number:
+            <input type="number" id="number">
         </label>
 
         <p>
         <label>
-            <input name="power" type="radio"> Square
+            <input name="power" type="radio" value=2> Square
         </label>
 
         <label>
-            <input name="power" type="radio"> Cube
+            <input name="power" type="radio" value=3> Cube
         </label> 
 
         <label>
-            <input name="power" type="radio"> Quadratic
+            <input name="power" type="radio" value=4> Tesseract
         </label>  
     </p>
 
     <p>
-        <button onclick="showName()">Click me</button>
+            <button onclick="calc()">Click me</button>
     </p>
 
-    <p id="result"></p>
 
     </main>
 
     <script>
 
-        function showName() {
-            var input = document.getElementById('name');
-            var name = input.value;
-            var p = document.getElementById('result');
-            p.innerText = 'Your name is ' + name;
-            
-            var background;
-            if (name === 'cam') {
-                background = 'steelblue';
+        function calc() {
+            var input = document.getElementById('number');
+            var number = input.value;
+    
+
+            if (isNaN(number)) {
+                alert('please input a number');
             }
             else {
-                background = '';
-            }    
+                var radio = document.querySelector('input[name=power]:checked');
+                var p = document.getElementById('result');
+
+                p.innerText = (number + 'to the power of ' + radio.value + 'is ' + number ** radio.value);
                 
-            p.style.backgroundColor = background;
-            
+  
+            }
+                    
         }
 
-        // function count() {
-        //     for (var i=0; i<20; i++) {
-
-        //         console.log(i+1);
-
-        //       }
-        //  }
+ 
     </script>
 </body>
 </html>
